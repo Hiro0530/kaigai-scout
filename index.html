@@ -20,7 +20,7 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;font-size:16px;-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;font-size:16px;-webkit-text-size-adjust:100%;overflow-wrap:break-word;overflow-x:hidden}
   a{color:var(--navy);}
   .wrap{max-width:960px;margin:0 auto;padding:0 20px}
   h1,h2,h3{line-height:1.35;margin:0 0 .6em;font-weight:700}
@@ -136,7 +136,7 @@
       <a class="btn" href="#apply">初月無料で申し込む</a>
       <a class="btn ghost" href="#sample">届くメールを見る</a>
     </div>
-    <p class="note">月額2,980円(税込)・初月無料・いつでも解約できます。クレジットカードの登録は初月終了前にご案内します。</p>
+    <p class="note">月額2,980円(税込)・初月無料・いつでも解約できます。お支払いはPayPal(クレジットカード可)で、初月は¥0、2か月目から請求が始まります。</p>
   </div>
 </section>
 
@@ -235,7 +235,7 @@
       <div class="step">
         <span class="num">1</span>
         <h3>キーワードを登録</h3>
-        <p>申込みフォームで、扱っている品群のキーワードを10個まで登録します。あわせて、その品群のだいたいの重量クラス(A〜D)を選びます。</p>
+        <p>PayPalで申込み後、扱っている品群のキーワードを10個までメールでお送りください。あわせて、その品群のだいたいの重さ(重量クラスA〜Dの目安)を添えていただくと送料の見積もりが正確になります。</p>
       </div>
       <div class="step">
         <span class="num">2</span>
@@ -244,7 +244,7 @@
       </div>
       <div class="step">
         <span class="num">3</span>
-        <h3>毎朝7時にメール</h3>
+        <h3>毎朝7時ごろにメール</h3>
         <p>当日の為替で、手数料・送料をすべて引いた仕入れ上限(円)を計算してお送りします。仕入れ先で値札を見たとき、この数字と比べるだけです。</p>
       </div>
     </div>
@@ -276,7 +276,7 @@
           <li>キーワードの差し替えは月3回まで</li>
         </ul>
         <a class="btn" href="#apply">初月無料で申し込む</a>
-        <p class="price-note" style="margin-top:12px">初月は無料です。2か月目以降は月額が発生します。いつでも解約でき、解約月の翌月以降は請求されません。</p>
+        <p class="price-note" style="margin-top:12px">初月は無料です。2か月目以降は月額が発生します。いつでも解約でき、解約後の請求はありません。</p>
       </div>
       <div class="plan">
         <h3>プロ</h3>
@@ -288,11 +288,11 @@
           <li>キーワードの差し替えは無制限</li>
           <li>利益目標(金額・率)の個別設定</li>
         </ul>
-        <a class="btn ghost" style="color:var(--navy);border-color:var(--navy)" href="#apply">プロで申し込む</a>
-        <p class="price-note" style="margin-top:12px">プロも初月無料です。スタンダードからの切り替えもできます。</p>
+        <a class="btn ghost" style="color:var(--navy);border-color:var(--navy)" href="mailto:csd.h.kobayashi@gmail.com?subject=%5BKAIGAI%20SCOUT%5D%20%E3%83%97%E3%83%AD%E3%83%97%E3%83%A9%E3%83%B3%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">プロは準備中・お問い合わせください</a>
+        <p class="price-note" style="margin-top:12px">プロプランは現在準備中です。ご希望の方は上のボタンからメールでお問い合わせください。開始時にご案内します。</p>
       </div>
     </div>
-    <p class="muted" style="margin-top:18px">お支払いはPayPal(クレジットカード可)です。初月は¥0で、2か月目から¥2,980/月。解約はPayPalの画面からいつでもできます。</p>
+    <p class="muted" style="margin-top:18px">お支払いはPayPal(クレジットカード可)です。初月は¥0で、2か月目から¥2,980/月。解約はPayPalの「自動支払い」設定画面からいつでもできます。</p>
   </div>
 </section>
 
@@ -322,7 +322,7 @@
 
     <details>
       <summary>解約はどうすればいいですか?</summary>
-      <p>メール末尾の「解約」リンク、または運営へのメール1通で完了します。解約月の翌月以降は請求されません。日割り返金はありませんが、解約月の末日までは配信を続けます。初月無料期間中に解約した場合、料金は一切かかりません。</p>
+      <p>PayPalにログインし、「自動支払い」の設定画面からKAIGAI SCOUTの定期支払いを解約してください。運営へのメール1通でも承ります。解約後の請求はありません。日割り返金はありませんが、支払い済みの期間の終了日までは配信を続けます。初月無料期間中に解約した場合、料金は一切かかりません。</p>
     </details>
 
     <details>
@@ -332,7 +332,7 @@
 
     <details>
       <summary>個人情報はどのように扱われますか?</summary>
-      <p>取得するのはメールアドレスと登録キーワード、重量クラスのみです。eBayのユーザー情報は保存しません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+      <p>取得するのはメールアドレス、登録キーワードと商品の重さの目安、PayPalの登録ID(定期支払いID)のみです。カード番号はPayPalが扱い、運営者は保持しません。eBayのユーザー情報は保存しません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
     </details>
   </div>
 </section>
@@ -341,29 +341,33 @@
   <div class="wrap">
     <h2>まずは1か月、無料で受け取ってみてください。</h2>
     <p>合わなければ、無料期間中の解約で費用はかかりません。</p>
-    <a class="btn" href="#apply">申込みフォームへ</a>
-    <p class="muted" style="color:#b9c2d4;margin-top:16px;font-size:.84rem">申込み後、通常1〜2営業日以内に初回メールをお送りします。</p>
+    <a class="btn" href="#apply">初月無料で申し込む</a>
+    <p class="muted" style="color:#b9c2d4;margin-top:16px;font-size:.84rem">PayPalで登録後、キーワードをメールでお送りいただくと、翌朝から配信を始めます。</p>
   </div>
 </section>
 
 
 <section id="apply" style="padding:40px 16px;max-width:720px;margin:0 auto">
   <h2 style="margin:0 0 8px">申込み(初月¥0)</h2>
-  <p class="muted" style="margin:0 0 16px">下のボタンからPayPalで登録すると、確認画面のあとに「キーワード登録」のご案内が表示されます。初月は¥0、2か月目から¥2,980/月。いつでも解約できます。</p>
+  <p class="muted" style="margin:0 0 16px">下のボタンからPayPalで登録すると、確認画面のあとに「キーワード登録」のご案内が表示されます(キーワードはメールでお送りいただきます)。初月は¥0、2か月目から¥2,980/月。いつでも解約できます。</p>
   <div id="paypal-button-container-P-57T96377CR374060ENLLYD6Y"></div>
-  <p id="apply-done" class="muted" style="display:none;margin-top:12px"></p>
+  <p id="apply-fallback" class="muted" style="display:none;margin-top:12px">PayPalのボタンが表示されない場合は、<a href="mailto:csd.h.kobayashi@gmail.com?subject=%5BKAIGAI%20SCOUT%5D%20%E7%94%B3%E8%BE%BC%E3%81%BF">メールでお問い合わせ</a>ください。</p>
 </section>
 <script src="https://www.paypal.com/sdk/js?client-id=BAAIw7R-KIGTFiZ7IdP9QockxD9hMXWSEkOBWIBfhaib6t_CGIaZb7qMle6r6L8PH1DlfLCHwVzRKiXKQ4&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 <script>
-  paypal.Buttons({
-    style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
-    createSubscription: function(data, actions) {
-      return actions.subscription.create({ plan_id: 'P-57T96377CR374060ENLLYD6Y' });
-    },
-    onApprove: function(data, actions) {
-      window.location.href = 'thanks.html?sub=' + encodeURIComponent(data.subscriptionID);
-    }
-  }).render('#paypal-button-container-P-57T96377CR374060ENLLYD6Y');
+  if (window.paypal && paypal.Buttons) {
+    paypal.Buttons({
+      style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({ plan_id: 'P-57T96377CR374060ENLLYD6Y' });
+      },
+      onApprove: function(data, actions) {
+        window.location.href = 'thanks.html?sub=' + encodeURIComponent(data.subscriptionID);
+      }
+    }).render('#paypal-button-container-P-57T96377CR374060ENLLYD6Y');
+  } else {
+    document.getElementById('apply-fallback').style.display = 'block';
+  }
 </script>
 <footer>
   <div class="wrap">

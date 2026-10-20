@@ -19,7 +19,7 @@
   table{border-collapse:collapse;width:100%;margin-top:24px}
   th,td{border:1px solid var(--line);padding:12px 14px;vertical-align:top;text-align:left;font-size:.95rem}
   th{background:var(--bg-soft);width:34%;font-weight:600}
-  @media(max-width:600px){th,td{display:block;width:100%}th{border-bottom:none}td{border-top:none;margin-bottom:8px}}
+  @media(max-width:600px){tr{display:block;margin-bottom:12px}th,td{display:block;width:100%}th{border-bottom:none}td{border-top:none;overflow-wrap:break-word}}
   .ph{background:#fff4e5;padding:0 4px;border-radius:3px}
   footer{background:#0f1830;color:#aab3c6;padding:24px 0;font-size:.84rem}
   footer a{color:#dfe5f1;text-decoration:none;margin-right:16px}
@@ -33,24 +33,24 @@
     <p class="muted">最終更新日: 2026年10月20日</p>
 
     <table>
-      <tr><th>販売事業者名</th><td>KAIGAI SCOUT 運営(古林)<br><span class="muted">※個人事業として運営しています。</span></td></tr>
+      <tr><th>販売事業者名</th><td>株式会社シー・エス・ディー(KAIGAI SCOUT 運営)<br><span class="muted">※お支払い先(PayPal)には「株式会社シー・エス・ディー」と表示されます。</span></td></tr>
       <tr><th>運営責任者</th><td>古林 浩敬</td></tr>
       <tr><th>所在地</th><td><span class="ph">{{ADDRESS}}</span><br><span class="muted">※請求があった場合は遅滞なく開示します。</span></td></tr>
       <tr><th>電話番号</th><td><span class="ph">{{PHONE}}</span><br><span class="muted">※お問い合わせは原則メールでお願いします。電話番号は請求があった場合に遅滞なく開示します。</span></td></tr>
-      <tr><th>メールアドレス</th><td><span class="ph">csd.h.kobayashi@gmail.com</span></td></tr>
+      <tr><th>メールアドレス</th><td><a href="mailto:csd.h.kobayashi@gmail.com">csd.h.kobayashi@gmail.com</a></td></tr>
       <tr><th>サービス名</th><td>KAIGAI SCOUT(海外スカウト)<br>eBay(米国)向け 日本発出品の相場・仕入れ上限価格のメール配信サービス</td></tr>
       <tr><th>販売価格</th><td>
         スタンダードプラン: 月額 2,980円(税込)/キーワード10個まで<br>
-        プロプラン: 月額 7,980円(税込)/キーワード30個まで<br>
-        <span class="muted">いずれも初月無料。2か月目以降、毎月同日に請求します。</span>
+        プロプラン: 月額 7,980円(税込)/キーワード30個まで(現在準備中。お問い合わせください)<br>
+        <span class="muted">スタンダードプランは初月無料(¥0)。2か月目以降、毎月同日に請求します。</span>
       </td></tr>
       <tr><th>販売価格以外に必要な費用</th><td>インターネット接続にかかる通信費等はお客様のご負担となります。それ以外に当サービスから請求する費用はありません。</td></tr>
-      <tr><th>お支払い方法</th><td>クレジットカード決済(Stripe)<br>決済ページ: <span class="ph">https://hiro0530.github.io/kaigai-scout/#apply</span></td></tr>
-      <tr><th>お支払い時期</th><td>初月無料期間の終了後、翌月分から毎月自動で決済されます。決済日はカード登録日を基準とした毎月同日です。</td></tr>
-      <tr><th>サービス提供時期</th><td>お申込みフォーム送信後、通常1〜2営業日以内に初回メールを配信し、以後毎朝7時ごろに配信します。</td></tr>
+      <tr><th>お支払い方法</th><td>PayPal定期支払い(PayPal残高またはPayPalに登録したクレジットカード)<br>決済ページ: <a href="index.html#apply">サービス紹介ページの申込み欄</a></td></tr>
+      <tr><th>お支払い時期</th><td>初月(登録日から1か月間)は無料です。2か月目以降、PayPal登録日を基準とした毎月同日に自動で決済されます。</td></tr>
+      <tr><th>サービス提供時期</th><td>PayPalでの登録後、キーワードをメールでお送りいただいた翌朝から配信を開始し、以後毎朝7時ごろに配信します。</td></tr>
       <tr><th>解約・返金について</th><td>
-        いつでも解約できます。配信メール末尾の「解約」リンク、または上記メールアドレスへのご連絡で解約が完了します。<br>
-        解約月の翌月以降は請求されません。解約月の末日までは配信を継続します。<br>
+        いつでも解約できます。PayPalの「自動支払い」設定画面から定期支払いを解約するか、上記メールアドレスへご連絡ください。<br>
+        解約後の請求はありません。支払い済みの期間の終了日までは配信を継続します。<br>
         サービスの性質上、支払い済みの月額料金の日割り返金は行いません。<br>
         初月無料期間中に解約された場合、料金は一切発生しません。
       </td></tr>
