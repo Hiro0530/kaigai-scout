@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KAIGAI SCOUT｜eBay輸出セラー向け「仕入れ上限価格」毎朝配信</title>
+<meta name="description" content="eBay(米国)に出ている日本発出品の相場・出品数・消滅数と、手数料・送料をすべて引いた「国内でいくら以下で仕入れれば利益が出るか」の上限価格を、毎朝メールでお届けします。月額2,980円(税込)、初月無料。">
+<style>
+  :root{
+    --navy:#14213d;
+    --navy-2:#1f2f52;
+    --ink:#1b1f2a;
+    --muted:#5c6475;
+    --line:#dfe3ea;
+    --bg:#ffffff;
+    --bg-soft:#f4f6f9;
+    --accent:#d97706;
+    --accent-soft:#fff4e5;
+    --ok:#15803d;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;font-size:16px;-webkit-text-size-adjust:100%}
+  a{color:var(--navy);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{line-height:1.35;margin:0 0 .6em;font-weight:700}
+  h2{font-size:1.45rem;color:var(--navy)}
+  h2 small{display:block;font-size:.8rem;color:var(--accent);letter-spacing:.12em;font-weight:600;margin-bottom:.4em}
+  p{margin:0 0 1em}
+  .muted{color:var(--muted);font-size:.92rem}
+  section{padding:56px 0}
+  section.soft{background:var(--bg-soft)}
+
+  /* header */
+  header{background:var(--navy);color:#fff;padding:14px 0}
+  header .wrap{display:flex;align-items:center;justify-content:space-between}
+  .brand{font-weight:700;letter-spacing:.08em;font-size:1.05rem;color:#fff;text-decoration:none}
+  .brand span{color:var(--accent)}
+  header nav a{color:#cdd3df;text-decoration:none;font-size:.88rem;margin-left:16px}
+  header nav{display:none}
+  @media(min-width:700px){header nav{display:block}}
+
+  /* hero */
+  .hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:64px 0 72px}
+  .hero h1{font-size:1.75rem;margin-bottom:.8em}
+  @media(min-width:700px){.hero h1{font-size:2.3rem}}
+  .hero .lead{font-size:1.05rem;color:#dde2ec;max-width:620px}
+  .hero .tag{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 14px;font-size:.82rem;margin-bottom:18px;color:#e9ecf3}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:14px 28px;border-radius:8px;font-size:1rem;box-shadow:0 2px 0 rgba(0,0,0,.15)}
+  .btn:hover{filter:brightness(1.05)}
+  .btn.ghost{background:transparent;border:1px solid #9aa5bd;color:#fff;box-shadow:none}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:24px}
+  .hero .note{font-size:.85rem;color:#b9c2d4;margin-top:14px}
+
+  /* mail sample */
+  .mail{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 4px 18px rgba(20,33,61,.06)}
+  .mail-head{background:var(--bg-soft);border-bottom:1px solid var(--line);padding:12px 16px;font-size:.88rem;color:var(--muted)}
+  .mail-head b{color:var(--ink)}
+  .mail-body{padding:16px}
+  .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;min-width:620px;font-size:.9rem}
+  th,td{padding:10px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+  th{background:var(--navy);color:#fff;font-weight:600;font-size:.82rem}
+  th:first-child,td:first-child{text-align:left}
+  td.limit{font-weight:700;color:var(--accent)}
+  tr.sub td{color:var(--muted);font-size:.8rem;border-bottom:none;padding-top:0}
+  .legend{font-size:.84rem;color:var(--muted);margin-top:12px}
+  .legend li{margin-bottom:4px}
+  .calc{background:var(--accent-soft);border-left:4px solid var(--accent);padding:14px 16px;border-radius:0 8px 8px 0;font-size:.9rem;margin-top:18px}
+  .calc b{color:var(--accent)}
+
+  /* steps */
+  .steps{display:grid;gap:18px}
+  @media(min-width:700px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 20px}
+  .step .num{display:inline-block;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;text-align:center;line-height:32px;font-weight:700;margin-bottom:10px}
+  .step h3{font-size:1.05rem}
+
+  /* honest box */
+  .honest{border:1px solid var(--line);border-radius:10px;padding:20px;background:#fff}
+  .honest h3{font-size:1.05rem;color:var(--navy)}
+  .honest ul{padding-left:1.2em;margin:0}
+  .honest li{margin-bottom:6px}
+
+  /* pricing */
+  .plans{display:grid;gap:18px}
+  @media(min-width:700px){.plans{grid-template-columns:1fr 1fr}}
+  .plan{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px 22px;position:relative}
+  .plan.main{border:2px solid var(--navy)}
+  .plan .badge{position:absolute;top:-12px;left:20px;background:var(--navy);color:#fff;font-size:.75rem;padding:3px 10px;border-radius:999px}
+  .plan h3{font-size:1.15rem;margin-bottom:4px}
+  .price{font-size:2rem;font-weight:700;color:var(--navy)}
+  .price small{font-size:.9rem;font-weight:400;color:var(--muted)}
+  .plan ul{padding-left:1.2em;margin:14px 0 18px}
+  .plan li{margin-bottom:5px}
+  .price-note{font-size:.84rem;color:var(--muted)}
+
+  /* faq */
+  details{border-bottom:1px solid var(--line);padding:14px 0}
+  summary{cursor:pointer;font-weight:600;list-style:none;position:relative;padding-right:28px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";position:absolute;right:4px;top:0;color:var(--accent);font-weight:700}
+  details[open] summary::after{content:"−"}
+  details p{margin:10px 0 0;color:#333;font-size:.95rem}
+
+  /* final cta */
+  .final{background:var(--navy);color:#fff;text-align:center}
+  .final h2{color:#fff}
+  .final p{color:#dde2ec}
+
+  footer{background:#0f1830;color:#aab3c6;padding:28px 0;font-size:.84rem}
+  footer a{color:#dfe5f1;text-decoration:none;margin-right:16px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">KAIGAI <span>SCOUT</span></a>
+    <nav>
+      <a href="#sample">メール例</a>
+      <a href="#how">仕組み</a>
+      <a href="#price">料金</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="tag">日本からeBay(米国)へ出品している方向け</span>
+    <h1>「いくら以下で仕入れれば利益が出るか」を、<br>毎朝メールでお届けします。</h1>
+    <p class="lead">扱いジャンルのキーワードを登録するだけ。eBayに出ている日本発出品の相場と出品数、直近30日で消えた出品数に加えて、手数料・送料・為替の安全幅をすべて引いた<strong>仕入れ上限価格(円)</strong>を計算して毎朝お送りします。</p>
+    <div class="cta-row">
+      <a class="btn" href="#apply">初月無料で申し込む</a>
+      <a class="btn ghost" href="#sample">届くメールを見る</a>
+    </div>
+    <p class="note">月額2,980円(税込)・初月無料・いつでも解約できます。クレジットカードの登録は初月終了前にご案内します。</p>
+  </div>
+</section>
+
+<section id="sample">
+  <div class="wrap">
+    <h2><small>SAMPLE</small>毎朝届くメールの例</h2>
+    <p class="muted">以下は配信イメージです。数値は例であり、実際の相場とは異なります。</p>
+
+    <div class="mail">
+      <div class="mail-head">
+        件名: <b>【KAIGAI SCOUT】10/20 朝の相場と仕入れ上限 (キーワード5件)</b><br>
+        為替: 1ドル = 151.20円(前日TTM) / 安全幅3%を引いた計算レート 146.66円
+      </div>
+      <div class="mail-body">
+        <div class="tbl-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>品群(キーワード)</th>
+                <th>eBay中央値</th>
+                <th>最高値</th>
+                <th>出品中</th>
+                <th>消滅30d</th>
+                <th>重量クラス</th>
+                <th>仕入れ上限(円)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>SSR ホイール 15インチ 4本</td>
+                <td>$1,480</td>
+                <td>$2,650</td>
+                <td>37</td>
+                <td>9</td>
+                <td>D(30kg超)</td>
+                <td class="limit">108,000</td>
+              </tr>
+              <tr>
+                <td>Z1 フェアレディZ 純正部品</td>
+                <td>$210</td>
+                <td>$890</td>
+                <td>412</td>
+                <td>71</td>
+                <td>B(2〜5kg)</td>
+                <td class="limit">12,500</td>
+              </tr>
+              <tr>
+                <td>ポケモンカード 旧裏 PSA</td>
+                <td>$325</td>
+                <td>$4,200</td>
+                <td>1,860</td>
+                <td>340</td>
+                <td>A(2kg未満)</td>
+                <td class="limit">24,900</td>
+              </tr>
+              <tr>
+                <td>RAYS TE37 17インチ</td>
+                <td>$1,920</td>
+                <td>$3,400</td>
+                <td>24</td>
+                <td>4</td>
+                <td>D(30kg超)</td>
+                <td class="limit">152,000</td>
+              </tr>
+              <tr>
+                <td>セイコー 6139 クロノグラフ</td>
+                <td>$540</td>
+                <td>$1,750</td>
+                <td>96</td>
+                <td>22</td>
+                <td>A(2kg未満)</td>
+                <td class="limit">47,800</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="legend">
+          <li><b>eBay中央値 / 最高値</b>: 日本発(Item location: Japan)の現在出品の価格。送料別の表示価格です。</li>
+          <li><b>出品中</b>: 本日時点の日本発の出品数。</li>
+          <li><b>消滅30d</b>: 直近30日間に一覧から消えた出品数。売れた分と取り下げ・期限切れが混ざるため、<u>回転の目安</u>としてご覧ください。</li>
+          <li><b>仕入れ上限(円)</b>: 中央値で売れた場合に「利益1万円 かつ 利益率30%」の両方を満たす、国内仕入れ価格の上限。</li>
+        </ul>
+        <div class="calc">
+          <b>仕入れ上限の計算に含めているもの</b><br>
+          eBay落札手数料 13.25% ／ 国際手数料 1.3% ／ 外貨の換金コスト 3% ／ 為替の安全幅 3% ／ 国際送料(重量クラス別の概算) ／ 梱包材・国内送料(クラス別の定額)。これらを全部差し引いたうえで、利益1万円と利益率30%のどちらも下回らない価格を出しています。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="how">
+  <div class="wrap">
+    <h2><small>HOW IT WORKS</small>仕組みは3ステップです</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="num">1</span>
+        <h3>キーワードを登録</h3>
+        <p>申込みフォームで、扱っている品群のキーワードを10個まで登録します。あわせて、その品群のだいたいの重量クラス(A〜D)を選びます。</p>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <h3>毎晩、eBayを巡回</h3>
+        <p>日本発の現在出品を集計し、中央値・最高値・出品数を出します。前日の一覧と比べて消えた出品を数え、30日分を積み上げます。</p>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <h3>毎朝7時にメール</h3>
+        <p>当日の為替で、手数料・送料をすべて引いた仕入れ上限(円)を計算してお送りします。仕入れ先で値札を見たとき、この数字と比べるだけです。</p>
+      </div>
+    </div>
+
+    <div style="margin-top:28px" class="honest">
+      <h3>既存の相場ツールと違うところ、そして、できないこと</h3>
+      <ul>
+        <li>出品価格を並べて終わりではなく、<strong>「買っていい上限価格」を円で出す</strong>ことに絞っています。</li>
+        <li>eBayの仕様上、実際に売れた価格は外部から安定して取得できません。そのため、<strong>「出品が一覧から消えたこと」を回転の推定に使っています</strong>。売れた以外の理由(取り下げ・期限切れ)も含まれます。</li>
+        <li>仕入れ上限は中央値で売れた場合の試算です。状態・付属品・時期で実際の売値は上下しますので、最終判断はご自身でお願いします。</li>
+        <li>eBay公式のサービスではありません。eBayの仕様変更により、配信内容や項目が変わる場合があります。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <h2><small>PRICING</small>料金</h2>
+    <div class="plans">
+      <div class="plan main">
+        <span class="badge">まずはこちら</span>
+        <h3>スタンダード</h3>
+        <div class="price">2,980円<small> /月(税込)</small></div>
+        <ul>
+          <li>キーワード 10個まで</li>
+          <li>毎朝のメール配信(週7日)</li>
+          <li>相場・出品数・消滅数・仕入れ上限</li>
+          <li>キーワードの差し替えは月3回まで</li>
+        </ul>
+        <a class="btn" href="#apply">初月無料で申し込む</a>
+        <p class="price-note" style="margin-top:12px">初月は無料です。2か月目以降は月額が発生します。いつでも解約でき、解約月の翌月以降は請求されません。</p>
+      </div>
+      <div class="plan">
+        <h3>プロ</h3>
+        <div class="price">7,980円<small> /月(税込)</small></div>
+        <ul>
+          <li>キーワード 30個まで</li>
+          <li>毎朝のメール配信(週7日)</li>
+          <li>相場・出品数・消滅数・仕入れ上限</li>
+          <li>キーワードの差し替えは無制限</li>
+          <li>利益目標(金額・率)の個別設定</li>
+        </ul>
+        <a class="btn ghost" style="color:var(--navy);border-color:var(--navy)" href="#apply">プロで申し込む</a>
+        <p class="price-note" style="margin-top:12px">プロも初月無料です。スタンダードからの切り替えもできます。</p>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:18px">お支払いはPayPal(クレジットカード可)です。初月は¥0で、2か月目から¥2,980/月。解約はPayPalの画面からいつでもできます。</p>
+  </div>
+</section>
+
+<section class="soft" id="faq">
+  <div class="wrap">
+    <h2><small>FAQ</small>よくある質問</h2>
+
+    <details>
+      <summary>なぜ「売れた価格」ではなく「出品の消滅」で回転を見るのですか?</summary>
+      <p>eBayの販売済み価格(Sold)は、外部から継続的に取得する安定した手段がありません。無理に取得すると規約に触れるおそれもあるため、当サービスでは行っていません。代わりに、毎晩の出品一覧を前日と比べて「消えた出品」を数えています。消えた理由には売却のほか、取り下げや期限切れも含まれますので、あくまで回転の目安です。</p>
+    </details>
+
+    <details>
+      <summary>eBayの規約上、問題はありませんか?</summary>
+      <p>公開されている出品情報の集計のみを行い、ログインを要する情報や、出品者・購入者の個人情報は取得・保存しません。eBayのAPI・利用条件の範囲で運用しています。eBayの仕様や条件が変わった場合は、配信項目を変更または停止することがあります。その際はメールでお知らせします。</p>
+    </details>
+
+    <details>
+      <summary>数字の精度はどのくらいですか?</summary>
+      <p>中央値・最高値・出品数は、集計時点のeBay上の日本発出品に基づくもので、検索キーワードの付け方で結果は変わります。仕入れ上限は、中央値で売れた場合に利益1万円・利益率30%を満たす価格を、手数料・送料・為替安全幅を引いて逆算したものです。実際の売値は商品の状態や時期で上下しますので、最終的な仕入れ判断はご自身で行ってください。利益を保証するものではありません。</p>
+    </details>
+
+    <details>
+      <summary>国際送料はどのように見積もっていますか?</summary>
+      <p>キーワードごとに登録いただいた重量クラス(A: 2kg未満 / B: 2〜5kg / C: 5〜30kg / D: 30kg超)ごとに、一般的な国際発送方法の概算送料を当てています。送料表は定期的に見直し、改定時はメールでお知らせします。実際の送料とは差が出ることがあります。</p>
+    </details>
+
+    <details>
+      <summary>解約はどうすればいいですか?</summary>
+      <p>メール末尾の「解約」リンク、または運営へのメール1通で完了します。解約月の翌月以降は請求されません。日割り返金はありませんが、解約月の末日までは配信を続けます。初月無料期間中に解約した場合、料金は一切かかりません。</p>
+    </details>
+
+    <details>
+      <summary>キーワードはどんなものが向いていますか?</summary>
+      <p>「ブランド名 + 型番/シリーズ + サイズ」のように、英語で検索したときに同じ種類の商品が集まる粒度が向いています。例: 「SSR Longchamp XR4 15」「Datsun 240Z OEM」「Pokemon card PSA 10 Japanese」。広すぎると中央値がぼやけ、狭すぎると出品数が少なくなります。お申込み後、初回配信前にこちらでキーワードを確認し、調整のご提案をすることがあります。</p>
+    </details>
+
+    <details>
+      <summary>個人情報はどのように扱われますか?</summary>
+      <p>取得するのはメールアドレスと登録キーワード、重量クラスのみです。eBayのユーザー情報は保存しません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+    </details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>まずは1か月、無料で受け取ってみてください。</h2>
+    <p>合わなければ、無料期間中の解約で費用はかかりません。</p>
+    <a class="btn" href="#apply">申込みフォームへ</a>
+    <p class="muted" style="color:#b9c2d4;margin-top:16px;font-size:.84rem">申込み後、通常1〜2営業日以内に初回メールをお送りします。</p>
+  </div>
+</section>
+
+
+<section id="apply" style="padding:40px 16px;max-width:720px;margin:0 auto">
+  <h2 style="margin:0 0 8px">申込み(初月¥0)</h2>
+  <p class="muted" style="margin:0 0 16px">下のボタンからPayPalで登録すると、確認画面のあとに「キーワード登録」のご案内が表示されます。初月は¥0、2か月目から¥2,980/月。いつでも解約できます。</p>
+  <div id="paypal-button-container-P-57T96377CR374060ENLLYD6Y"></div>
+  <p id="apply-done" class="muted" style="display:none;margin-top:12px"></p>
+</section>
+<script src="https://www.paypal.com/sdk/js?client-id=BAAIw7R-KIGTFiZ7IdP9QockxD9hMXWSEkOBWIBfhaib6t_CGIaZb7qMle6r6L8PH1DlfLCHwVzRKiXKQ4&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+    style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
+    createSubscription: function(data, actions) {
+      return actions.subscription.create({ plan_id: 'P-57T96377CR374060ENLLYD6Y' });
+    },
+    onApprove: function(data, actions) {
+      window.location.href = 'thanks.html?sub=' + encodeURIComponent(data.subscriptionID);
+    }
+  }).render('#paypal-button-container-P-57T96377CR374060ENLLYD6Y');
+</script>
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </div>
+    <div>KAIGAI SCOUT 運営(古林)　eBayはeBay Inc.の商標です。当サービスはeBayとは関係ありません。</div>
+  </div>
+</footer>
+
+</body>
+</html>
