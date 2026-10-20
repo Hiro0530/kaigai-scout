@@ -1,0 +1,15 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>登録ありがとうございます — KAIGAI SCOUT</title>
+<style>body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;margin:0;background:#f6f7fb;color:#1a2238}main{max-width:640px;margin:0 auto;padding:32px 16px}.card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.06)}h1{font-size:22px;margin:0 0 12px}.btn{display:inline-block;background:#1a2a6c;color:#fff;text-decoration:none;padding:14px 22px;border-radius:8px;font-weight:600;margin-top:16px}.muted{color:#5b6478;font-size:14px}code{background:#eef1f8;padding:2px 6px;border-radius:4px}</style></head>
+<body><main><div class="card">
+<h1>登録ありがとうございます</h1>
+<p>最後に、毎朝の配信で追いかける<strong>キーワード(10個まで)</strong>を送ってください。下のボタンを押すとメールが開きます。本文にキーワードを1行ずつ書いて送信するだけです。</p>
+<p class="muted">例: <code>SSR MK3</code> <code>Kawasaki Z1 純正</code> <code>Pokemon card PSA10</code><br>送料計算のため、主な商品の重さ(例: 1kg以内 / 5kg / 40kg)も1行添えていただけると精度が上がります。</p>
+<a class="btn" id="mail" href="#">キーワードをメールで送る</a>
+<p class="muted" style="margin-top:20px">初回の配信は、キーワード受領の翌朝6時台です。届かない場合は迷惑メールフォルダをご確認ください。解約はPayPalの「自動支払い」画面からいつでも可能です。</p>
+<p class="muted">登録ID: <span id="sub"></span></p>
+</div></main>
+<script>
+var sub=new URLSearchParams(location.search).get('sub')||'';document.getElementById('sub').textContent=sub||'(未取得)';
+var body='KAIGAI SCOUT キーワード登録\n登録ID: '+sub+'\n\n【キーワード(1行ずつ・10個まで)】\n1. \n2. \n3. \n\n【主な商品の重さ】\n';
+document.getElementById('mail').href='mailto:csd.h.kobayashi@gmail.com?subject='+encodeURIComponent('[KAIGAI SCOUT 登録] '+sub)+'&body='+encodeURIComponent(body);
+</script></body></html>
