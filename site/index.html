@@ -350,21 +350,21 @@
 <section id="apply" style="padding:40px 16px;max-width:720px;margin:0 auto">
   <h2 style="margin:0 0 8px">申込み(初月¥0)</h2>
   <p class="muted" style="margin:0 0 16px">下のボタンからPayPalで登録すると、確認画面のあとに「キーワード登録」のご案内が表示されます(キーワードはメールでお送りいただきます)。初月は¥0、2か月目から¥2,980/月。いつでも解約できます。</p>
-  <div id="paypal-button-container-P-57T96377CR374060ENLLYD6Y"></div>
+  <div id="paypal-button-container-P-5N393382L8213202RNLLZPGI"></div>
   <p id="apply-fallback" class="muted" style="display:none;margin-top:12px">PayPalのボタンが表示されない場合は、<a href="mailto:zeroichi.works.jp@gmail.com?subject=%5BKAIGAI%20SCOUT%5D%20%E7%94%B3%E8%BE%BC%E3%81%BF">メールでお問い合わせ</a>ください。</p>
 </section>
-<script src="https://www.paypal.com/sdk/js?client-id=BAAIw7R-KIGTFiZ7IdP9QockxD9hMXWSEkOBWIBfhaib6t_CGIaZb7qMle6r6L8PH1DlfLCHwVzRKiXKQ4&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=BAAs5ea7Ld6vSKwykF1FPziDOze2UQ_ctxuY_tdFFL-xjFQJfpn7sZfy4pKvZ0eVoMmYKVEFsJOmWeobKI&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 <script>
   if (window.paypal && paypal.Buttons) {
     paypal.Buttons({
       style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
       createSubscription: function(data, actions) {
-        return actions.subscription.create({ plan_id: 'P-57T96377CR374060ENLLYD6Y' });
+        return actions.subscription.create({ plan_id: 'P-5N393382L8213202RNLLZPGI' });
       },
       onApprove: function(data, actions) {
         window.location.href = 'thanks.html?sub=' + encodeURIComponent(data.subscriptionID);
       }
-    }).render('#paypal-button-container-P-57T96377CR374060ENLLYD6Y');
+    }).render('#paypal-button-container-P-5N393382L8213202RNLLZPGI');
   } else {
     document.getElementById('apply-fallback').style.display = 'block';
   }
